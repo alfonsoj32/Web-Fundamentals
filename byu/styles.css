@@ -1,5 +1,13 @@
 nav, footer {
     background-color: steelblue;
     color: white;
-    padding: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+footer p {
+    padding: 25px;
+}
+h1 {
+    margin: 50px 0;
 }
