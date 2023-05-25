@@ -159,24 +159,34 @@
   grid-template-columns: 300px 300px;
 }
 .red6 {
-  width: 100px; 
+  width: 200px; 
   height: 100px; 
   background-color: red; 
+  grid-column: 1/3;
+  z-index: -1;
 } 
 .green6 {
   width: 100px; 
   height: 100px; 
   background-color: green; 
+  grid-row: 3/3;
+  margin-top: -50px;
 } 
 .yellow6 {
   width: 100px; 
-  height: 100px; 
+  height: 200px; 
   background-color: gold; 
+  grid-row: 3/3;
+  margin-top: -150px;
+  margin-left: -100px;
 } 
 .blue6 {
-  width: 100px; 
-  height: 100px; 
+  width: 200px; 
+  height: 200px; 
   background-color: blue; 
+  margin-top: -50px;
+  margin-left: 50px;
+  z-index: -1;
 } 
 
 
