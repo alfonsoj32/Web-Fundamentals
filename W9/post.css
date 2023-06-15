@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+
+.card {
+    max-width: 250px;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    font-family: sans-serif;
+
+}
+
+.wide {
+    width: 100%;
+}
