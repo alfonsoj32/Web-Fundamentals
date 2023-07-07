@@ -20,10 +20,29 @@
             <a href="contactus.html">Contact Us</a>
         </nav>
     </header>
-    <div id="hero">
-        <div id="hero-box">
+    <div class="hero">
+        <div class="hero-box fade">
+            <div class="numbertext">1 / 4</div>
             <img id="hero-img" src="images/hero.png" alt="People enjoying white water rafting">
+            <div class="text">Rafts</div>
         </div>
+        <div class="hero-box fade">
+            <div class="numbertext">2 / 4</div>
+            <img id="hero-img" src="images/grand-canyon-colorado-river.jpg" alt="river">
+            <div class="text">Rivers</div>
+        </div>
+        <div class="hero-box fade">
+            <div class="numbertext">3 / 4</div>
+            <img id="hero-img" src="images/Mushroom-Rapid-Cherry-Creek.jpg" alt="rapids">
+            <div class="text">Rapidst</div>
+        </div>
+        <div class="hero-box fade">
+            <div class="numbertext">4 / 4</div>
+            <img id="hero-img" src="images/tent-camping-at-sunset.jpg" alt="camping">
+            <div class="text">Camping</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
         <section id="hero-msg">
             <h1 class="home-title">Fun is Coming!</h1>
             <h4>Have fun in Wat-Da-Fun Rafts </h4>
@@ -32,6 +51,41 @@
             </div>
         </section>
     </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("hero-box");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
     <main class="home-grid">
         <section class="rivers-card">
             <img class="card-img" src="images/SalmonRiver.jpg" alt="river in forest">
